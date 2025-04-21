@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhotosRizos</title>
+  <style>
+    :root {
+      --primary-color: #00ff88;
+      --bg-color: #0d0d0d;
+      --text-color: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      overflow-x: hidden;
+    }
+
+    header {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      animation: bgSlide 30s infinite linear;
+    }
+
+    @keyframes bgSlide {
+      0% { background-image: url('galeria/foto1.jpg'); }
+      25% { background-image: url('galeria/foto2.jpg'); }
+      50% { background-image: url('galeria/foto3.jpg'); }
+      75% { background-image: url('galeria/foto4.jpg'); }
+      100% { background-image: url('galeria/foto1.jpg'); }
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: var(--primary-color);
+      text-shadow: 2px 2px 10px #000;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .about, .services, .contact {
+      margin-top: 4rem;
+    }
+
+    .services ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .contact input, .contact textarea {
+      padding: 0.75rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .contact button {
+      padding: 0.75rem;
+      background-color: var(--primary-color);
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #111;
+      padding: 2rem;
+      text-align: center;
+      color: #aaa;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PhotosRizos</h1>
+    <p>Capturando la velocidad y la emoción</p>
+  </header>
+
+  <section class="gallery">
+    <h2>Galería</h2>
+    <div class="gallery">
+      <img src="galeria/foto1.jpg" alt="Rally 1">
+      <img src="galeria/foto2.jpg" alt="Rally 2">
+      <img src="galeria/foto3.jpg" alt="Rally 3">
+      <img src="galeria/foto4.jpg" alt="Rally 4">
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>Sobre mí</h2>
+    <p>Mi nombre es Rizos y soy un fotógrafo apasionado del motor y el deporte. Me especializo en capturar los momentos más intensos y emocionantes de los rallyes y partidos de fútbol, buscando siempre transmitir la energía y la pasión del instante.</p>
+  </section>
+
+  <section class="services">
+    <h2>Servicios</h2>
+    <ul>
+      <li>Fotografía profesional de rallyes y fútbol</li>
+      <li>Edición avanzada y entrega digital</li>
+      <li>Diseño gráfico deportivo para redes y eventos</li>
+      <li>Creación de contenido personalizado</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2>Contacto</h2>
+    <p>¿Tienes un evento o proyecto en mente? ¡Hablemos!</p>
+    <form>
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu email" required>
+      <textarea rows="5" placeholder="Tu mensaje"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 PhotosRizos | Sígueme en Instagram @photosrizos</p>
+  </footer>
+</body>
+</html>
